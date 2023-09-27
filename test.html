@@ -1,6 +1,11 @@
 <script>
 	isInEmbeddedBrowser = document.referrer.includes('android-app://')
 	document.write("isInEmbeddedBrowser = " + isInEmbeddedBrowser + "<br />")
-	document.write("document.referrer = " + document.referrer)
+	document.write("document.referrer = " + document.referrer + "<br />")
+	document.write("Previously Set: document.cookie = " + document.cookie + "<br />")
+	document.cookie = "username=John Doe; expires=Thu, 28 Sep 2023 12:00:00 UTC";
+	document.write("After Set: document.cookie = " + document.cookie + "<br />")
 </script>
+<br />
+<br />
 <a href="test.html">Link to self</a>
